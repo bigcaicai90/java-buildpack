@@ -29,7 +29,7 @@
             <Host name='localhost' appBase="webapps"
 					unpackWARs="true" autoDeploy="false">
                 <Listener className="com.gopivotal.cloudfoundry.tomcat.lifecycle.ApplicationStartupFailureDetectingLifecycleListener"/>
-				<Context path="/RetailChallenge" />
+				<Context path="/RetailChallenge" docBase="ROOT" />
             </Host>
         </Engine>
     </Service>
