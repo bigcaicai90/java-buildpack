@@ -27,10 +27,9 @@
                    pattern='[ACCESS] %{org.apache.catalina.AccessLog.RemoteAddr}r %l %t %D %F %B %S vcap_request_id:%{X-Vcap-Request-Id}i'
                    enabled="${access.logging.enabled}"/>
             <Host name='localhost' appBase="webapps"
-					unpackWARs="true" autoDeploy="false"
-					xmlValidation="false" xmlNamespaceAware="false">
+					unpackWARs="true" autoDeploy="false">
                 <Listener className="com.gopivotal.cloudfoundry.tomcat.lifecycle.ApplicationStartupFailureDetectingLifecycleListener"/>
-				<Context docBase="RetailChallenge.war" path="/RetailChallenge" />
+				<Context path="/RetailChallenge" />
             </Host>
         </Engine>
     </Service>
